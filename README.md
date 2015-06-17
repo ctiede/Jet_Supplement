@@ -10,7 +10,7 @@
 ```
 
 
-**video_parallel.cpp** will loop through a given directory to find datafiles matching Regular expression *checkpoint.*\\.h5* and use a plotting script to generate correspoinding image in parallel. An example PBS script is included. 
+**video_parallel.cpp** will loop through a given directory to find datafiles matching Regular expression *checkpoint.*\\.h5* and use a plotting script to generate correspoinding image in parallel. It uses C++ boost library. An example PBS script is included. 
 
 
 
