@@ -10,7 +10,7 @@ import matplotlib.gridspec as gridspec
 
 
 import PyJet
-import PyUtil
+
 
 Input = sys.argv[1]
 Output = sys.argv[2]
@@ -24,7 +24,7 @@ plotnum3 = 6;
 PI = 3.1415926536
 Data = PyJet.pyjet_prim(Input)
 Time_code = PyJet.pyjet_time(Input)
-Time = PyJet.pyjet_time(Input)*PyUtil.Unit.T
+
 Radius_arr = np.array(Data[:,1])
 Phi_arr    = np.array(Data[:,0]) + PI/2.0
 
@@ -65,7 +65,7 @@ v = np.linspace(1,18, 100, endpoint=True)
 cax=plt.tricontourf(triang, data_append, 100,cmap=plt.cm.jet_r)
 #plt.colorbar(cax, ticks=[4, 6, 8, 10, 12,14,16])
 plt.colorbar()
-plt.title("t=%.2e s (%.2e)"%(Time,Time_code))
+plt.title("t=(%.2e)"%(Time_code))
 
 
 Angles=np.unique(Phi_arr);
